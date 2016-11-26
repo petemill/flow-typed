@@ -14,7 +14,6 @@ declare class express$RequestResponseBase {
 
 declare class express$Request extends http$IncomingMessage mixins express$RequestResponseBase {
   baseUrl: string;
-  body?: string | Buffer | {[key: string]: mixed};
   cookies: {[cookie: string]: string};
   fresh: boolean;
   hostname: boolean;
@@ -40,6 +39,7 @@ declare class express$Request extends http$IncomingMessage mixins express$Reques
   is(type: string): boolean;
   param(name: string, defaultValue?: string): string | void;
 }
+
 
 declare type express$CookieOptions = {
   domain?: string,
